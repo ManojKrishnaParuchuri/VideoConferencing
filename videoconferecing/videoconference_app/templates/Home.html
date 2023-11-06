@@ -1,0 +1,28 @@
+<html>
+  {% load static %}
+  <head>
+    <title>VideoConferencingWebsite</title>
+    <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+
+  </head>
+  <body>
+    <div class="banner">
+      
+      <div class="navbar">
+        <a href="https://www.flaticon.com/free-icons/restaurant" class="logo"></a>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'register'  %}">SignUp</a></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h1>Welcome to My Website.</h1><br>
+       <p>Want to Create your own meeting or join in the existing one<br> then click the button below.</p>
+        <form action="{% url 'register'  %}">
+        <button type="submit" class="button"><b>Visit Now!</b></button>
+      </form>
+      </div>
+    </div>
+  </body>
+</html>
