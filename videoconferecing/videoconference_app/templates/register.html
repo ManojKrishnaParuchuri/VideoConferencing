@@ -12,8 +12,8 @@
 </head>
 <body>
   <div class="container">
-    <div class="registration form">
-      <header>Signup</header>
+    <div class="login form">
+      <header align="center">Signup</header>
       <form action="{% url 'register' %}" method="POST">
         {% csrf_token %}
         <input type="text" placeholder="Enter your first name" name="first_name">
@@ -29,11 +29,7 @@
         </center>
         
       </form>
-      <div class="signup">
-        <span class="signup">Already have an account?
-          <a href="{% url 'login' %}"><label for="check">Signin</label></a>
-        </span>
-      </div>
+      <p class="signup">Already Registered then - <a class="signup" href="{% url 'login' %}" style="color:rgb(227, 66, 227);text-decoration: none;">Login</a></p>
     </div>
   </div>
 </body>
